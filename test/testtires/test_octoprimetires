@@ -1,0 +1,13 @@
+import unittest
+from tires.tires.octoprime_tires import OctoprimeTires
+
+class TestOctoprimeTires(unittest.TestCase):
+    def test_battery_should_be_serviced(self):
+        tire_wear = [2, 3, 1, 4]
+        tires = OctoprimeTires(tire_wear)
+        self.assertTrue(tires.needs_service())
+
+    def test_battery_should_not_be_serviced(self):
+        tire_wear = [1, 2, 0, -1]
+        tires = OctoprimeTires(tire_wear)
+        self.assertTrue(tires.needs_service())
