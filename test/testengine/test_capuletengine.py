@@ -1,5 +1,4 @@
 import unittest
-from datetime import datetime
 from engine.engine.capulet_engine import CapuletEngine
 
 class TestCapuletEngine(unittest.TestCase):
