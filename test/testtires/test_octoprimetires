@@ -3,11 +3,11 @@ from tires.tires.octoprime_tires import OctoprimeTires
 
 class TestOctoprimeTires(unittest.TestCase):
     def test_battery_should_be_serviced(self):
-        tire_wear = [2, 3, 1, 4]
+        tire_wear = [0.8, 0.8, 0.8, 0.7]
         tires = OctoprimeTires(tire_wear)
         self.assertTrue(tires.needs_service())
 
     def test_battery_should_not_be_serviced(self):
-        tire_wear = [1, 2, 0, -1]
+        tire_wear = [0.1, 0.2, 0.4, 0.2]
         tires = OctoprimeTires(tire_wear)
         self.assertTrue(tires.needs_service())
